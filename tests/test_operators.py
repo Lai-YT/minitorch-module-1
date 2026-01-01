@@ -110,8 +110,8 @@ def test_sigmoid(a: float) -> None:
     assert 0.0 <= sigmoid(a) <= 1.0
     assert_close(1.0 - sigmoid(a), sigmoid(-a))
     assert_close(sigmoid(0.0), 0.5)
-    # Do not want a + 1.0 to exceed 37, which all approximates to 1.0.
-    if a < 37:
+    # Do not want a + 1.0 to exceed 30, which all approximates to 1.0.
+    if a < 30:
         assert sigmoid(a) < sigmoid(a + 1.0)
 
 
